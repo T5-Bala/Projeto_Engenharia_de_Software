@@ -113,56 +113,36 @@
       </div>
     </div>
   </nav>
-
-  <!--<div class="container">
-  <br>
-    <h1>Cursos</h1>
-    <br>
-
-    <table class="table">
-      <thead>
-          <tr>
-              <th>Nome do Curso</th>
-              <th>Vagas</th>
-              <th>Duraçao</th>
-              <th>Preço</th>
-              <th>Docente</th>
-          </tr>
-      </thead>
-      <tbody>
-          <?php
-          /*
+  <?php
+          
           include '../basedados/basedados.h';
-          $sql = "SELECT * FROM cursos";
+          $sql = "SELECT count(*) FROM pedidos_registo WHERE estado_pedido = 0";
           $result = mysqli_query($conn, $sql);
           
-          while ($row = mysqli_fetch_assoc($result)) {
+          if($result) {
 
-            $sql2 = "SELECT nome_utilizador FROM utilizadores WHERE id_utilizador = " . $row['docente_curso'];
-            $result2 = mysqli_query($conn, $sql2);
-            $row2 = mysqli_fetch_assoc($result2);
+            $row = mysqli_fetch_array($result);
+            $num_pedidos = $row[0];
+          }
 
-                echo "<tr>";
-                echo "<td>" . $row['nome_curso'] . "</td>";
-                echo "<td>" . $row['vagas_curso'] . "</td>";
-                echo "<td>" . $row['duracao_curso'] . "h </td>";
-                echo "<td>" . $row['preco_curso'] . "€ </td>";
-                echo "<td>" . $row2['nome_utilizador'] . "</td>";
-              
-                echo "</tr>";
-            
-          }*/
-          ?>
-      </tbody>
-  </table>
+           
+
+            ?>
+  <div class="container">
+  <br>
+    <h1>Pedidos de Registro</h1>
+    <h5>Têm <?php echo $num_pedidos?> pedidos pendentes<h5>
+    <br>
+
+    
 
 
 
   <br>
-  </div>-->
+  </div>
 
   <footer class="bg-dark text-white text-center p-3 " style="position: fixed; left:0; bottom:0; width:100%;">
-        <p>&copy; 2023 Gestão de cursos de formação. Todos os direitos reservados.</p>
+        <p>&copy; 2023 Gestão de Salas. Todos os direitos reservados.</p>
       </footer>
 </body>
 
