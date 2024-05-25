@@ -134,6 +134,11 @@
     <h5>Têm <?php echo $num_pedidos?> pedidos pendentes<h5>
     <br>
 
+
+     <br>   
+     <br>
+
+    <h1>Ocupação das Salas</h1>
     <table class="table">
       <thead>
           <tr>
@@ -150,8 +155,7 @@
           include '../basedados/basedados.h';
         
 
-        $sql2 = "SELECT * FROM salas s 
-            WHERE s.estado_sala = 1";
+        $sql2 = "SELECT * FROM salas ";
           $result2 = mysqli_query($conn, $sql2);
           
           while ($row = mysqli_fetch_assoc($result2)) {
@@ -161,11 +165,20 @@
             $result3 = mysqli_query($conn, $sql3);
             $row2 = mysqli_fetch_assoc($result3);
 
-                echo "<tr>";
-                echo "<td>" . $row['NomeSala'] . "</td>";
-                echo "<td>" . $row['numVagas'] . "</td>";
-                echo "<td>" . $row2['NomeDivisao'] . " </td>";
+            if($row['estado_sala']==1){
+                echo "<tr><font color='green'>";
+                echo "<td><font color='green'>" . $row['NomeSala'] . "</td>";
+                echo "<td><font color='green'>" . $row['numVagas'] . "</td>";
+                echo "<td><font color='green'>" . $row2['NomeDivisao'] . " </td>";
                 echo "</tr>";
+            }
+            if($row['estado_sala']==0){
+              echo "<tr><font color='red'>";
+              echo "<td><font color='red'>" . $row['NomeSala'] . "</td>";
+              echo "<td><font color='red'>" . $row['numVagas'] . "</td>";
+              echo "<td><font color='red'>" . $row2['NomeDivisao'] . " </td>";
+              echo "</tr>";
+          }
             
           }
           ?>
