@@ -135,12 +135,12 @@
           
           while ($row = mysqli_fetch_assoc($result)) {
 
-            $sql2 = "SELECT NomeSala FROM salas s where s.id_sala = " . $row['id_sala'];
+            $sql2 = "SELECT NomeSala FROM salas s where s.id_sala = " . $row['id_Sala'];
             $result2 = mysqli_query($conn, $sql2);
             $row2 = mysqli_fetch_assoc($result2);
            
                 echo "<tr>";
-                echo "<td>" . $row2['Nome'] . "</td>";
+                echo "<td>" . $row2['NomeSala'] . "</td>";
                 echo "<td>" . $row['HoraOcupInicio'] . "</td>";
                 echo "<td>" . $row['HoraOcupFim'] . "h </td>";
                 echo "<td>" . $row['DataOcupInicio'] . "€ </td>";
