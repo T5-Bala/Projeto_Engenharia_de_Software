@@ -162,6 +162,7 @@
 
             $sql3 = "SELECT NomeDivisao FROM divisao d inner join salas s on d.id_Divisao = s.id_Divisao
              WHERE s.id_sala = " . $row['id_Sala'];
+             
             $result3 = mysqli_query($conn, $sql3);
             $row2 = mysqli_fetch_assoc($result3);
 
