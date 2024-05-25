@@ -90,7 +90,7 @@
 <body>
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <div class="container">
-      <a class="navbar-brand" href="index.html">Lingua do Papi</a>
+      <a class="navbar-brand" href="index.html">Gestão de Salas</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
         aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -128,16 +128,16 @@
         </thead>
         <tbody>
             <?php
+           include '../basedados/basedados.h';
             
-            $conn = mysqli_connect("localhost", "root", "", "lpi_trab");
             $sql = "SELECT * FROM pedidos_registo";
             $result = mysqli_query($conn, $sql);
             while ($row = mysqli_fetch_assoc($result)) {
 
                   echo "<tr>";
                   echo "<td>" . $row['id_pedido'] . "</td>";
-                  echo "<td>" . $row['nome_utilizador'] . "</td>";
-                  echo "<td>" . $row['idade_utilizador'] . "</td>";
+                  echo "<td>" . $row['nome'] . "</td>";
+                  echo "<td>" . $row['idade'] . "</td>";
                   echo "<td>" . $row['data_nasc'] . "</td>";
                   echo "<td>
                   <select name='nivel'class='form-select'>
