@@ -130,7 +130,7 @@
           <?php
           
           include '../basedados/basedados.h';
-        
+       
 
         $sql = "SELECT * FROM salas s 
             WHERE s.estado_sala = 1";
@@ -147,8 +147,10 @@
                 echo "<td>" . $row['NomeSala'] . "</td>";
                 echo "<td>" . $row['numVagas'] . "</td>";
                 echo "<td>" . $row2['NomeDivisao'] . " </td>";
+
+                $_SESSION['id_sala'] = $row['id_Sala'];
                 
-                echo "<td> <input type='hidden' value='". $row['id_Sala'] ."' name='id_sala' class='btn btn-primary'> </td>";
+                
                 echo "<td> <button type='submit' class='btn btn-primary'>Reservar</button> </td>";
                 echo "</tr>";
             

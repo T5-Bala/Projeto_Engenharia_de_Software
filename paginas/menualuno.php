@@ -141,10 +141,10 @@
            
                 echo "<tr>";
                 echo "<td>" . $row2['NomeSala'] . "</td>";
-                echo "<td>" . $row['HoraOcupInicio'] . "</td>";
+                echo "<td>" . $row['HoraOcupInicio'] . "h</td>";
                 echo "<td>" . $row['HoraOcupFim'] . "h </td>";
-                echo "<td>" . $row['DataOcupInicio'] . "€ </td>";
-                echo "<td>" . $row['HoraOcupFim'] . "</td>";
+                echo "<td>" . $row['DataOcupInicio'] . " </td>";
+                echo "<td>" . $row['DataOcupFim'] . "</td>";
               
                 echo "</tr>";
             

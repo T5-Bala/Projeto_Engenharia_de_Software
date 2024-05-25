@@ -101,7 +101,7 @@
         </div>
       </div>
       <?php
-                echo "<td> <input type='hidden' value='". $_POST['id_sala'] ."' name='id_sala' class='btn btn-primary'> </td>";
+               
       
       ?>
       
