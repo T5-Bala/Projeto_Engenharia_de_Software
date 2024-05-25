@@ -98,7 +98,7 @@
       <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
         <ul class="navbar-nav">
           <li class="nav-item">
-            <a class="nav-link" href="inscrever_curso.php">Inscrever Curso</a>
+            <a class="nav-link" href="inscrever_curso.php">Reservar Sala</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="editardados.php">Editar Dados</a>
@@ -113,38 +113,38 @@
 
   <div class="container">
   <br>
-  <h1>Os Seus Cursos</h1>
+  <h1>As suas Reservas</h1>
     <br>
 
     <table class="table">
       <thead>
           <tr>
-              <th>Nome do Curso</th>
-              <th>Vagas</th>
-              <th>Duraçao</th>
-              <th>Preço</th>
-              <th>Docente</th>
+              <th>Sala</th>
+              <th>Hora Inicio</th>
+              <th>Hora Fim</th>
+              <th>Data Inicio</th>
+              <th>Data Fim</th>
           </tr>
       </thead>
       <tbody>
           <?php
           
           include '../basedados/basedados.h';
-          $sql = "SELECT * FROM salas";
+          $sql = "SELECT * FROM ocupacao where id_Utilizador = " . $_SESSION['id_utilizador'];
           $result = mysqli_query($conn, $sql);
           
           while ($row = mysqli_fetch_assoc($result)) {
 
-            $sql2 = "SELECT nome_utilizador FROM utilizadores WHERE id_utilizador = " . $row['docente_curso'];
+            $sql2 = "SELECT NomeSala FROM salas s where s.id_sala = " . $row['id_sala'];
             $result2 = mysqli_query($conn, $sql2);
             $row2 = mysqli_fetch_assoc($result2);
-
+           
                 echo "<tr>";
-                echo "<td>" . $row['nome_curso'] . "</td>";
-                echo "<td>" . $row['vagas_curso'] . "</td>";
-                echo "<td>" . $row['duracao_curso'] . "h </td>";
-                echo "<td>" . $row['preco_curso'] . "€ </td>";
-                echo "<td>" . $row2['nome_utilizador'] . "</td>";
+                echo "<td>" . $row2['Nome'] . "</td>";
+                echo "<td>" . $row['HoraOcupInicio'] . "</td>";
+                echo "<td>" . $row['HoraOcupFim'] . "h </td>";
+                echo "<td>" . $row['DataOcupInicio'] . "€ </td>";
+                echo "<td>" . $row['HoraOcupFim'] . "</td>";
               
                 echo "</tr>";
             

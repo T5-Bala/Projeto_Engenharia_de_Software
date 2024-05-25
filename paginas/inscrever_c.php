@@ -3,9 +3,11 @@ session_start();
 
 include '../basedados/basedados.h';
 
-if(isset($_POST['id_sala'])){
+if(isset($_POST['id_sala']) && isset($_SESSION['id_utilizador']){
     $sql = "update salas set estado_sala = 0 where id_sala = " . $_POST['id_sala'];
     $res = mysqli_query($conn, $sql);
+
+    
     
     if($res){
         echo "A sua reserva foi realizada com sucesso!";

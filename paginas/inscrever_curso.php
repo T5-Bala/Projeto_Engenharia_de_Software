@@ -138,7 +138,7 @@
           
           while ($row = mysqli_fetch_assoc($result)) {
 
-            $sql2 = "SELECT NomeDivisao FROM divisao_sala ds inner join divisao d on ds.id_divisao = d.id_divisao inner join salas s on ds.id_sala = s.id_sala
+            $sql2 = "SELECT NomeDivisao FROM divisao d inner join salas s on d.id_Divisao = s.id_Divisao
              WHERE ds.id_sala = " . $row['id_Sala'];
             $result2 = mysqli_query($conn, $sql2);
             $row2 = mysqli_fetch_assoc($result2);
