@@ -132,15 +132,15 @@
           $result = mysqli_query($conn, $sql);
           
           while ($row = mysqli_fetch_assoc($result)) {
-            $sql = "SELECT descricao FROM nivel_acesso WHERE nivel_acesso = " . $row['nivel_acesso'];
+            $sql = "SELECT Nivel FROM niveis WHERE id_Niveis = " . $row['nivel_acesso'];
             $result2 = mysqli_query($conn, $sql);
             $row2 = mysqli_fetch_assoc($result2);
 
                 echo "<tr>";
                 echo "<td>" . $row['nome_utilizador'] . "</td>";
-                echo "<td>" . $row['idade'] . "</td>";
-                echo "<td>" . $row['data_nasc'] . " </td>";
-                echo "<td>" . $row2['descricao'] . " </td>";
+                echo "<td>" . $row['Idade'] . "</td>";
+                echo "<td>" . $row['dataNascimento'] . " </td>";
+                echo "<td>" . $row2['Nivel'] . " </td>";
                 echo "<td> <input type='hidden' value='". $row['id_utilizador'] ."' name='id_utilizador' class='btn btn-primary'> </td>";
                 echo "<td> <button type='submit' class='btn btn-primary'>Remove</button> </td>";
                 echo "</tr>";
