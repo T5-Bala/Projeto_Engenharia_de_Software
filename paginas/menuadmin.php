@@ -134,6 +134,44 @@
     <h5>Têm <?php echo $num_pedidos?> pedidos pendentes<h5>
     <br>
 
+    <table class="table">
+      <thead>
+          <tr>
+              <th>Nome da Sala</th>
+              <th>Vagas</th>
+              <th>Divisao</th>
+             
+          </tr>
+      </thead>
+      <tbody>
+        
+          <?php
+          
+          include '../basedados/basedados.h';
+        
+
+        $sql2 = "SELECT * FROM salas s 
+            WHERE s.estado_sala = 1";
+          $result2 = mysqli_query($conn, $sql2);
+          
+          while ($row = mysqli_fetch_assoc($result2)) {
+
+            $sql3 = "SELECT NomeDivisao FROM divisao_sala ds inner join divisao d on ds.id_divisao = d.id_divisao inner join salas s on ds.id_sala = s.id_sala
+             WHERE ds.id_sala = " . $row['id_Sala'];
+            $result3 = mysqli_query($conn, $sql3);
+            $row2 = mysqli_fetch_assoc($result3);
+
+                echo "<tr>";
+                echo "<td>" . $row['NomeSala'] . "</td>";
+                echo "<td>" . $row['numVagas'] . "</td>";
+                echo "<td>" . $row2['NomeDivisao'] . " </td>";
+                echo "</tr>";
+            
+          }
+          ?>
+          
+      </tbody>
+  </table>
     
 
 

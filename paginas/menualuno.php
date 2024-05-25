@@ -130,11 +130,7 @@
           <?php
           
           include '../basedados/basedados.h';
-          $sql = "SELECT * FROM cursos c INNER JOIN inscricoes i ON c.id_curso = i.id_curso 
-          inner join utilizadores u on i.id_utilizador = u.id_utilizador
-          where i.id_utilizador = " . $_SESSION['id_utilizador'] . "
-          and i.estado_inscricao = 1
-          ORDER BY nome_curso ASC";
+          $sql = "SELECT * FROM salas";
           $result = mysqli_query($conn, $sql);
           
           while ($row = mysqli_fetch_assoc($result)) {
