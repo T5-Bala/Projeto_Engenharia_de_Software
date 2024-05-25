@@ -8,7 +8,7 @@ if(isset($_POST['id_sala']) && isset($_SESSION['id_utilizador']) && isset($_POST
     $sql = "update salas set estado_sala = 0 where id_sala = " . $_POST['id_sala'];
     $res = mysqli_query($conn, $sql);
 
-    $sql2 ="Insert into ocupacao values (" . $_POST['dataini'] . ", " . $_POST['horaini'] . ", '" . $_POST['datafim'] . "', '" . $_POST['horafim'] . "', '" . $_SESSION['id_utilizador'] . "', '" . $_POST['id_sala'] . "')";
+    $sql2 = "INSERT INTO ocupacao VALUES ('" . $_POST['dataini'] . "', '" . $_POST['horaini'] . "', '" . $_POST['datafim'] . "', '" . $_POST['horafim'] . "', '" . $_SESSION['id_utilizador'] . "', '" . $_POST['id_sala'] . "')";
     $res2 = mysqli_query($conn, $sql2);
 
     if($res){
