@@ -119,11 +119,10 @@
     <table class="table">
       <thead>
           <tr>
-              <th>Nome do Curso</th>
+              <th>Nome da Sala</th>
               <th>Vagas</th>
-              <th>Duraçao</th>
-              <th>Preço</th>
-              <th>Docente</th>
+              <th>Divisao</th>
+             
           </tr>
       </thead>
       <tbody>
@@ -133,25 +132,24 @@
           include '../basedados/basedados.h';
         
 
-        $sql = "SELECT * FROM cursos c 
-            WHERE c.vagas_curso - (SELECT COUNT(*) FROM inscricoes WHERE id_curso = c.id_curso AND estado_inscricao = 1) > 0";
+        $sql = "SELECT * FROM salas s 
+            WHERE s.estado_sala = 1";
           $result = mysqli_query($conn, $sql);
           
           while ($row = mysqli_fetch_assoc($result)) {
 
-            $sql2 = "SELECT nome_utilizador FROM utilizadores WHERE id_utilizador = " . $row['docente_curso'];
+            $sql2 = "SELECT NomeDivisao FROM divisao_sala ds inner join divisao d on ds.id_divisao = d.id_divisao inner join salas s on ds.id_sala = s.id_sala
+             WHERE ds.id_sala = " . $row['id_Sala'];
             $result2 = mysqli_query($conn, $sql2);
             $row2 = mysqli_fetch_assoc($result2);
 
                 echo "<tr>";
-                echo "<td>" . $row['nome_curso'] . "</td>";
-                echo "<td>" . $row['vagas_curso'] . "</td>";
-                echo "<td>" . $row['duracao_curso'] . "h </td>";
-                echo "<td>" . $row['preco_curso'] . "€ </td>";
-                echo "<td>" . $row2['nome_utilizador'] . "</td>";
-
-                echo "<td> <input type='hidden' value='". $row['id_curso'] ."' name='id_curso' class='btn btn-primary'> </td>";
-                echo "<td> <button type='submit' class='btn btn-primary'>Inscrever</button> </td>";
+                echo "<td>" . $row['NomeSala'] . "</td>";
+                echo "<td>" . $row['numVagas'] . "</td>";
+                echo "<td>" . $row2['NomeDivisao'] . " </td>";
+                
+                echo "<td> <input type='hidden' value='". $row['id_Sala'] ."' name='id_sala' class='btn btn-primary'> </td>";
+                echo "<td> <button type='submit' class='btn btn-primary'>Reservar</button> </td>";
                 echo "</tr>";
             
           }
@@ -165,7 +163,7 @@
   <br>
   </div>
   <footer class="bg-dark text-white text-center p-3 " style="position: fixed; left:0; bottom:0; width:100%;">
-        <p>&copy; 2023 Gestão de cursos de formação. Todos os direitos reservados.</p>
+        <p>&copy; 2023 Gestão de Salas. Todos os direitos reservados.</p>
       </footer>
 </body>
 
