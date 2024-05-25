@@ -155,23 +155,15 @@
           include '../basedados/basedados.h';
         
 
-        $sql2 = "SELECT * FROM salas ";
-          $result2 = mysqli_query($conn, $sql2);
+        $sql1 = "SELECT * FROM salas ";
+          $result1 = mysqli_query($conn, $sql1);
           
-          while ($row = mysqli_fetch_assoc($result2)) {
+          while ($row = mysqli_fetch_assoc($result1)) {
 
-<<<<<<< HEAD
             $sql2 = "SELECT NomeDivisao FROM divisao d inner join salas s on d.id_Divisao = s.id_Divisao
             WHERE s.id_sala = " . $row['id_Sala'];
            $result2 = mysqli_query($conn, $sql2);
            $row2 = mysqli_fetch_assoc($result2);
-=======
-            $sql3 = "SELECT NomeDivisao FROM divisao d inner join salas s on d.id_Divisao = s.id_Divisao
-             WHERE s.id_sala = " . $row['id_Sala'];
-             
-            $result3 = mysqli_query($conn, $sql3);
-            $row2 = mysqli_fetch_assoc($result3);
->>>>>>> 383127f9930dbde2277de547780d0281e7a98645
 
             if($row['estado_sala']==1){
                 echo "<tr><font color='green'>";
