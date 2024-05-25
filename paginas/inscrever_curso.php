@@ -126,7 +126,7 @@
           </tr>
       </thead>
       <tbody>
-        <form action="inscrever_c.php" method="POST">
+        <form action="ocupacao.php" method="POST">
           <?php
           
           include '../basedados/basedados.h';
