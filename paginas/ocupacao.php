@@ -75,7 +75,7 @@
           <!-- login -->
           <div class="col-md-4 offset-md-4 align-items-center justify-content-center container"  style="margin-top: 1%;">
             <h2>Definir Horário</h2>
-            <form action = "increver_c.php" method = "POST">
+            <form action = "inscrever_c.php" method = "POST">
               <div class="mb-3">
                 <label for="utilizador" class="form-label">Hora Inicio</label>
                 <input type="time" class="form-control" id="horaini" name="horaini" required >
