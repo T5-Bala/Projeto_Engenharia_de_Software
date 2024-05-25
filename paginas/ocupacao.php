@@ -1,6 +1,6 @@
 <?php
    session_start();
-   if($_SESSION['nivel'] != 3){
+   if($_SESSION['nivel'] != 1){
      header('Location: voltar.php');
    }
 
@@ -78,11 +78,11 @@
             <form action = "increver_c.php" method = "POST">
               <div class="mb-3">
                 <label for="utilizador" class="form-label">Hora Inicio</label>
-                <input type="text" class="form-control" id="horaini" name="horaini" required >
+                <input type="time" class="form-control" id="horaini" name="horaini" required >
               </div>
               <div class="mb-3">
                 <label for="password" class="form-label">Hora Fim</label>
-                <input type="password" class="form-control" id="horafim" name="horafim" required>
+                <input type="time" class="form-control" id="horafim" name="horafim" required>
               </div>
               <div class="mb-3">
                 <label for="idade" class="form-label">Data Inicio</label>
@@ -101,7 +101,7 @@
         </div>
       </div>
       <?php
-                echo "<td> <input type='hidden' value='". $_POST['id_Sala'] ."' name='id_sala' class='btn btn-primary'> </td>";
+                echo "<td> <input type='hidden' value='". $_POST['id_sala'] ."' name='id_sala' class='btn btn-primary'> </td>";
       
       ?>
       
