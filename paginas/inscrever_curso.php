@@ -163,7 +163,7 @@
   <br>
   </div>
   <footer class="bg-dark text-white text-center p-3 " style="position: fixed; left:0; bottom:0; width:100%;">
-        <p>&copy; 2023 Gestão de cursos de formação. Todos os direitos reservados.</p>
+        <p>&copy; 2023 Gestão de Salas. Todos os direitos reservados.</p>
       </footer>
 </body>
 
