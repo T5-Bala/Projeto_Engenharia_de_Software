@@ -14,7 +14,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
   <link rel="stylesheet" href="bootstrap.min.css">
-  <title>Gestão de cursos de formação</title>
+  <title>Gestão de Salas</title>
   <style>
     body {
       background-image: url("fundo-reciclado-da-textura-do-papel-branco-papel-de-parede-vintage_118047-8988.avif");
@@ -90,22 +90,13 @@
 <body>
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <div class="container">
-      <a class="navbar-brand" href="index.php">Gestão de cursos de formação</a>
+      <a class="navbar-brand" href="index.php">Gestão de Salas</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
         aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
         <ul class="navbar-nav">
-          <li class="nav-item">
-            <a class="nav-link" href="adicionarcurso.php">Adicionar Curso</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="removercurso.php">Remover Curso</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="editarcursoadm.php">Editar Curso</a>
-          </li>
           <li class="nav-item">
             <a class="nav-link" href="adicionarutilizador.php">Adicionar Utilizadores</a>
           </li>
@@ -123,7 +114,7 @@
     </div>
   </nav>
 
-  <div class="container">
+  <!--<div class="container">
   <br>
     <h1>Cursos</h1>
     <br>
@@ -140,7 +131,7 @@
       </thead>
       <tbody>
           <?php
-          
+          /*
           include '../basedados/basedados.h';
           $sql = "SELECT * FROM cursos";
           $result = mysqli_query($conn, $sql);
@@ -160,7 +151,7 @@
               
                 echo "</tr>";
             
-          }
+          }*/
           ?>
       </tbody>
   </table>
@@ -168,7 +159,8 @@
 
 
   <br>
-  </div>
+  </div>-->
+
   <footer class="bg-dark text-white text-center p-3 " style="position: fixed; left:0; bottom:0; width:100%;">
         <p>&copy; 2023 Gestão de cursos de formação. Todos os direitos reservados.</p>
       </footer>
