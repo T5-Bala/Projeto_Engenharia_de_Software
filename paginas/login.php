@@ -54,7 +54,7 @@
           <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
             <ul class="navbar-nav">
               <li class="nav-item">
-                <a class="nav-link" href="volta.php">Volta</a>
+                <a class="nav-link" href="volta.php">Voltar</a>
               </li>
             </ul>
           </div>
