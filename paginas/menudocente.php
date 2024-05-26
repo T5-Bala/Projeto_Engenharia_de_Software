@@ -125,7 +125,7 @@ if($_SESSION['nivel'] != 2){
             <thead>
                 <tr>
                     <th>Nome da Divisão</th>
-                    <th>Descrição</th>
+                    
                 </tr>
             </thead>
             <tbody>
@@ -138,7 +138,7 @@ if($_SESSION['nivel'] != 2){
                 while ($row = mysqli_fetch_assoc($result)) {
                     echo "<tr>";
                     echo "<td>" . $row['NomeDivisao'] . "</td>";
-                    echo "<td>" . $row['Descricao'] . "</td>";
+                    
                     echo "</tr>";
                 }
                 ?>
