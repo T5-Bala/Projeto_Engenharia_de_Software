@@ -6,10 +6,12 @@
 
 session_start();
 
-if(isset($_POST['utilizador']) && isset($_POST['idade']) && isset($_POST['data_nasc'])){
+if(isset($_POST['utilizador']) && isset($_POST['idade']) && isset($_POST['data_nasc']) && isset($_POST['email'])){
 
 
-$sql = "UPDATE utilizadores SET nome_utilizador='".$_POST['utilizador']."', idade='".$_POST['idade']."', data_nasc='".$_POST['data_nasc']."' WHERE id_utilizador=".$_SESSION['id_utilizador'];
+$sql = "UPDATE utilizadores SET
+ nome_utilizador='".$_POST['utilizador']."', idade='".$_POST['idade']."', dataNascimento='".$_POST['data_nasc']."', email = '".$_POST['email']."' 
+ WHERE id_utilizador=".$_SESSION['id_utilizador'];
 $res = mysqli_query($conn,$sql);
 
 if($res){

@@ -15,7 +15,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
   <link rel="stylesheet" href="bootstrap.min.css">
-  <title>Gestão de cursos de formação</title>
+  <title>Gestão de Salas</title>
   <style>
     body {
       background-image: url("fundo-reciclado-da-textura-do-papel-branco-papel-de-parede-vintage_118047-8988.avif");
@@ -91,7 +91,7 @@
 <body>
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <div class="container">
-      <a class="navbar-brand" href="index.html">Gestão de cursos de formação</a>
+      <a class="navbar-brand" href="index.html">Gestão de Salas</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
         aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -140,6 +140,10 @@
                 <label for="data_nasc" class="form-label">Data Nascimento</label>
                 <input type="date" class="form-control" id="data_nasc" name="data_nasc" value = "<?php echo $row['data_nasc']; ?>" required>
               </div>
+              <div class="mb-3">
+                <label for="email" class="form-label">Email</label>
+                <input type="text" class="form-control" id="email" name="email" value = "<?php echo $row['email']; ?>" required>
+              </div>
               
               <button type="submit" class="btn btn-primary">Editar</button>
             </form>
@@ -156,7 +160,7 @@
     </div>
   <br>
   <footer class="bg-dark text-white text-center p-3 " style="position: fixed; left:0; bottom:0; width:100%;">
-    <p>&copy; 2023 Gestão de cursos de formação. Todos os direitos reservados.</p>
+    <p>&copy; 2023 Gestão de Salas. Todos os direitos reservados.</p>
   </footer>
 </body>
 
