@@ -57,16 +57,7 @@
           <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
             <ul class="navbar-nav">
               <li class="nav-item">
-                <a class="nav-link" href="menu.html">Preços</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="horarios.html">Horários</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="contactos.html">Contactos</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="login.html">Login/Registar</a>
+                <a class="nav-link" href="voltar.html">Voltar</a>
               </li>
             </ul>
           </div>
@@ -84,6 +75,10 @@
               <div class="mb-3">
                 <label for="utilizador" class="form-label">Utilizador</label>
                 <input type="text" class="form-control" id="utilizador" name="utilizador" required >
+              </div>
+              <div class="mb-3">
+                <label for="email" class="form-label">Email</label>
+                <input type="text" class="form-control" id="utilizador" name="email" required >
               </div>
               <div class="mb-3">
                 <label for="password" class="form-label">Password</label>

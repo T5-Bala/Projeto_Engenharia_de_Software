@@ -54,16 +54,7 @@
           <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
             <ul class="navbar-nav">
               <li class="nav-item">
-                <a class="nav-link" href="menu.php">Preços</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="horarios.php">Horários</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="contactos.html">Contactos</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="login.php">Login/Registar</a>
+                <a class="nav-link" href="volta.php">Volta</a>
               </li>
             </ul>
           </div>
