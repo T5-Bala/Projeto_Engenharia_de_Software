@@ -134,11 +134,11 @@
               </div>
               <div class="mb-3">
                 <label for="idade" class="form-label">Idade</label>
-                <input type="text" class="form-control" id="idade" name="idade" value = "<?php echo $row['idade']; ?>" required>
+                <input type="text" class="form-control" id="idade" name="idade" value = "<?php echo $row['Idade']; ?>" required>
               </div>
               <div class="mb-3">
                 <label for="data_nasc" class="form-label">Data Nascimento</label>
-                <input type="date" class="form-control" id="data_nasc" name="data_nasc" value = "<?php echo $row['data_nasc']; ?>" required>
+                <input type="date" class="form-control" id="data_nasc" name="data_nasc" value = "<?php echo $row['dataNascimento']; ?>" required>
               </div>
               <div class="mb-3">
                 <label for="email" class="form-label">Email</label>
