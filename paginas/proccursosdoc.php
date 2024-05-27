@@ -11,7 +11,7 @@ if (isset($_POST['nome_curso']) && isset($_POST['vagas']) && isset($_POST['durac
 $sql = "INSERT INTO cursos (nome_curso, vagas_curso, duracao_curso, preco_curso, docente_curso) VALUES
  ('".$_POST['nome_curso']."', '".$_POST['vagas']."', '".$_POST['duracao']."', '".$_POST['preco']."', '".$_SESSION['id_utilizador']."')";
 
-$res = mysqli_query($conn $sql);
+$res = mysqli_query($conn, $sql);
 header('Location: voltar.php');
 
 }
